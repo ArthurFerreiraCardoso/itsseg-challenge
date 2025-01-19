@@ -1,24 +1,24 @@
 package exercises;
 
 import java.util.Arrays;
-import java.util.Optional;
 
-/** 3 - Encontrar o maior e o menor número em uma sequência
- * Há  uma sequência de números separados por espaços e deve retornar o maior e o menor número.*/
+/**
+ * 3 - Encontrar o maior e o menor número em uma sequência
+ * Há  uma sequência de números separados por espaços e deve retornar o maior e o menor número.
+ */
 
 public class ExerciseThree {
     public static String highAndLow(String numbers) {
         if (numbers == null || numbers.isEmpty()) {
             return "";
         }
-        Optional<Integer> max = Arrays.stream(numbers.split(" "))
-                .map(Integer::parseInt)
-                .max(Integer::compare);
+        int[] nums = Arrays.stream(numbers.split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
 
-        Optional<Integer> min = Arrays.stream(numbers.split(" "))
-                .map(Integer::parseInt)
-                .min(Integer::compare);
+        int max = Arrays.stream(nums).max().orElseThrow();
+        int min = Arrays.stream(nums).min().orElseThrow();
 
-        return max.flatMap(m -> min.map(n -> m + " " + n)).orElse("");
+        return max + " " + min;
     }
 }
