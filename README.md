@@ -3,7 +3,7 @@
 
 ## Tecnologias Utilizadas
 - **Java**: Versão 17
-- JUnit**: Versão 4.13.1
+- **JUnit**: Versão 4.13.1
 - **Maven**: Para gerenciamento de dependências e execução dos testes
 
 Este repositório contém a resolução dos desafios de programação para o processo seletivo It's Seg Company. Cada desafio foi resolvido com base em requisitos específicos destacados em cada demanda e testado com casos de teste automatizados para garantir o funcionamento correto. As soluções foram desenvolvidas utilizando a linguagem Java.
