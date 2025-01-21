@@ -9,7 +9,8 @@ import java.util.Set;
  */
 
 public class ExerciseTwo {
-    public static String disemvowel(String text) {
+
+    public static String removingVowel(String text) {
         if (text == null) {
             return "";
         }
@@ -26,3 +27,5 @@ public class ExerciseTwo {
         return result.toString();
     }
 }
+
+
